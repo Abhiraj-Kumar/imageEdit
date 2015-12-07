@@ -23,8 +23,8 @@ class ViewController: UIViewController {
   
     @IBAction func clickedButton(sender: UIButton) {
                 let cameraViewController =        IMGLYInstanceFactory.viewControllerForButtonType(IMGLYMainMenuButtonType.Crop, withFixedFilterStack: IMGLYFixedFilterStack())
-                cameraViewController?.lowResolutionImage = UIImage(named: "b2.png")
-                cameraViewController?.previewImageView.image = UIImage(named: "b2.png")
+                cameraViewController?.lowResolutionImage = UIImage(named: "B2.png")
+                cameraViewController?.previewImageView.image = UIImage(named: "B2.png")
            cameraViewController?.completionHandler = subEditorDidComplete
         
         

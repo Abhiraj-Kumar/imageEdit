@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B5A25851C15650A009E8A6F /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A25831C15650A009E8A6F /* AddImageViewController.swift */; };
+		6B5A25861C15650A009E8A6F /* AddImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A25841C15650A009E8A6F /* AddImageViewController.xib */; };
+		6B5A25891C157295009E8A6F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5A25871C157295009E8A6F /* ImageCollectionViewCell.swift */; };
+		6B5A258A1C157295009E8A6F /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5A25881C157295009E8A6F /* ImageCollectionViewCell.xib */; };
 		6BC2044A1C12C8CF009F8567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC204491C12C8CF009F8567 /* AppDelegate.swift */; };
 		6BC2044C1C12C8CF009F8567 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC2044B1C12C8CF009F8567 /* ViewController.swift */; };
 		6BC2044F1C12C8CF009F8567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC2044D1C12C8CF009F8567 /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B5A25831C15650A009E8A6F /* AddImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddImageViewController.swift; path = Controller/AddImageViewController.swift; sourceTree = "<group>"; };
+		6B5A25841C15650A009E8A6F /* AddImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddImageViewController.xib; path = Controller/AddImageViewController.xib; sourceTree = "<group>"; };
+		6B5A25871C157295009E8A6F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCollectionViewCell.swift; path = Controller/ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B5A25881C157295009E8A6F /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageCollectionViewCell.xib; path = Controller/ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		6BC204461C12C8CF009F8567 /* ImageEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC204491C12C8CF009F8567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BC2044B1C12C8CF009F8567 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +114,10 @@
 			children = (
 				6BC204491C12C8CF009F8567 /* AppDelegate.swift */,
 				6BC2044B1C12C8CF009F8567 /* ViewController.swift */,
+				6B5A25831C15650A009E8A6F /* AddImageViewController.swift */,
+				6B5A25841C15650A009E8A6F /* AddImageViewController.xib */,
+				6B5A25871C157295009E8A6F /* ImageCollectionViewCell.swift */,
+				6B5A25881C157295009E8A6F /* ImageCollectionViewCell.xib */,
 				6BC2044D1C12C8CF009F8567 /* Main.storyboard */,
 				6BC204501C12C8CF009F8567 /* Assets.xcassets */,
 				6BC204521C12C8CF009F8567 /* LaunchScreen.storyboard */,
@@ -258,7 +270,9 @@
 			files = (
 				6BC204541C12C8CF009F8567 /* LaunchScreen.storyboard in Resources */,
 				6BC204511C12C8CF009F8567 /* Assets.xcassets in Resources */,
+				6B5A25861C15650A009E8A6F /* AddImageViewController.xib in Resources */,
 				6BC2044F1C12C8CF009F8567 /* Main.storyboard in Resources */,
+				6B5A258A1C157295009E8A6F /* ImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +347,8 @@
 			files = (
 				6BC2044C1C12C8CF009F8567 /* ViewController.swift in Sources */,
 				6BC2044A1C12C8CF009F8567 /* AppDelegate.swift in Sources */,
+				6B5A25891C157295009E8A6F /* ImageCollectionViewCell.swift in Sources */,
+				6B5A25851C15650A009E8A6F /* AddImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
