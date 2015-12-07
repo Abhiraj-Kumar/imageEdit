@@ -32,7 +32,7 @@ class AddImageViewController: UIViewController {
 
     @IBOutlet weak var centreImage: UIImageView!
     let addImage = UIImage(named: "s")
-    let defaultCentreImage = UIImage(named: "s")
+    let defaultCentreImage = UIImage(named: "")
     var imageList:[UIImage]=[]
     var indexOfCentreImage:Int?
     
@@ -71,7 +71,7 @@ class AddImageViewController: UIViewController {
         
         switch TagForButtonInView(rawValue:sender.tag)!{
         case .Done:
-            self.showCameraRoll()
+            self.presetAlertForPhotoSelction()
             return
         case .Crop:
             self.presentImageEditorOfType(.Crop)
@@ -174,11 +174,11 @@ class AddImageViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func showCameraRoll() {
+    func showCameraRoll(type:UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
         
         imagePicker.delegate = self
-        imagePicker.sourceType = .Camera
+        imagePicker.sourceType = type
         //imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         imagePicker.mediaTypes = [String(kUTTypeImage)]
         imagePicker.allowsEditing = false
@@ -198,6 +198,28 @@ class AddImageViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    func presetAlertForPhotoSelction(){
+        let actionSheet = UIAlertController(title: "Choose Photo", message: "Please choose the photo style", preferredStyle: .ActionSheet)
+        let photoAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) { (photoAction) -> Void in
+            self.showCameraRoll(.PhotoLibrary)
+        }
+        let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) { (action) -> Void in
+            self.showCameraRoll(.Camera)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in
+        }
+        
+        actionSheet.addAction(photoAction)
+        actionSheet.addAction(cameraAction)
+        actionSheet.addAction(cancelAction)
+        self.presentViewController(actionSheet, animated: true, completion: nil)
+
+
+        
+    }
 
 }
 
@@ -228,7 +250,7 @@ extension AddImageViewController:UICollectionViewDelegate{
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 0{
-            self.showCameraRoll()
+            self.presetAlertForPhotoSelction()
         }
         else{
             self.centreImage.image = imageList[indexPath.row-1]
